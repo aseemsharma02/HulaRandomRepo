@@ -1,0 +1,21 @@
+version: 0.2
+
+phases: 
+    install:
+        runtime-versions:
+            nodejs: 16.2
+        commands:
+            - echo "iiinstalling something"
+    pre_build:
+        commands: 
+            - echo "This is the pre build phase"
+    build:
+        commands:
+            - echo "This is the build phase Man to GIT1.2"
+            - echo "Here we can run some tests"
+            - grep -Fq "Welcome" index.html
+    post_build:
+        commands:
+            - echo "This is the post build phase"
+            - echo " My name is Babu"
+		- echo " My name is Aseem"
